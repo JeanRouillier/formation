@@ -1,0 +1,13 @@
+<configuration>
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %X{x-correlation-id} - %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="Hypersistence Optimizer" level="info"/>
+
+    <root level="INFO">
+        <appender-ref ref="consoleAppender"/>
+    </root>
+</configuration>
