@@ -1,5 +1,6 @@
 package com.lm.service.formation.domain.dto.history;
 
+import com.lm.service.formation.domain.dto.worksite.WorkSiteOutDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,4 +35,6 @@ public class TimelineEventDTO implements Serializable {
   private UUID correlationId;
 
   private Map<String, String> metadata;
+
+  private WorkSiteOutDTO workSite;
 }

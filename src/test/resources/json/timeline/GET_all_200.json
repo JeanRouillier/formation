@@ -1,0 +1,10 @@
+[
+  {
+    "date": "2018-09-24T13:00:15Z",
+    "type": "SMS_SENT",
+    "metadata": {
+      "Another random key": "second comment",
+      "Random key": "first comment"
+    }
+  }
+]

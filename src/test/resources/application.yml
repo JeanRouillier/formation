@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /install
+    context-path: /demo
   port: 8080
 
 spring:

@@ -29,7 +29,7 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
-    schemas: ${DB_SCHEMA:postgres}
+    schemas: postgres
 
 management:
   server:
