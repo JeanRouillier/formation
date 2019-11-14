@@ -23,6 +23,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -59,4 +64,18 @@ public class TimelineEvent implements Serializable {
 
   @Column(name = "CREATED_BY")
   private String createdBy;
+
+  public List<TimelineEventMetadata> getMetadata() {
+    return metadata == null
+        ? Collections.emptyList()
+        : new ArrayList<>(metadata);
+  }
+
+  public TimelineEvent addMetadata(Collection<TimelineEventMetadata> data) {
+    this.metadata = this.metadata == null
+        ? new HashSet<>()
+        : this.metadata;
+    metadata.addAll(data);
+    return this;
+  }
 }
