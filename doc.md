@@ -216,10 +216,26 @@ The test framework which will used are both Spring-tests, Mockito and AspectJ .
 Spring-test will allow us to obtain a spring test context.
 
 Mockito will allow us to test each layers independently from each others.
+Mockito is embendeed by Spring-test.
+
 When we are developing Unit Tests, we mock every dependencies to only have the method's behavious tested.
 
 AsertJ will provid us fluent assertions during our tests.
 
+Here are dependencies to add in `pom.xml`
+```xml  
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.12.2</version>
+            <scope>test</scope>
+        </dependency>
+```
 ### Persistence Layer
 In this layer we will implement a database with a scheme.
 Here are steps to follow:
