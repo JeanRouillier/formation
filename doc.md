@@ -232,9 +232,26 @@ With Spring Data, the scheme and data can be provisioning in the ```resource``` 
 
 ==> data.sql
 
-==> flyway pom & conf
-
 Do not forget tests !
+
+####Flyway
+Flyway is a schema migration tool. With this tool, the version of your application is synced with the version of your database schema.
+With this tool, every one is able to have a database up to date.
+
+Have a look at the documentation [Flyway web site](https://flywaydb.org/)
+
+#### Docker
+This lab don't intend to present you docker but you will find a docker-compose & a dockerfile in this project.
+
+Using this tool on this project will provide you with a simple command to have a database.
+
+To generate an empty databse, this project choose to use a Postgres 9.6.
+
+Just run this command: 
+
+```docker-compose db up```
+
+It will start an empty database on port 5432.
 
 ### Service layer
 Nothing special here, we only describe Spring Service.
