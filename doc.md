@@ -257,14 +257,35 @@ It will start an empty database on port 5432.
 Nothing special here, we only describe Spring Service.
 
 Do not forget tests !
+
 ### Controller layer
 Let's write our endpoints !
 
+#### Documentation - Swagger
+This is the dependency to add in the pom:
+```xml
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+```
+The first dependence will allow you to annotate your endpoints to generate the appropriate documentation.
+
+The second one will provide us a generated web site representing our API.
 For the documentation, an implementation of Open API specification is SpringFox. Unfortunately Sprongfox only implements OpenAPI 2.
 
-We can use Springdoc to genrate an OpenAPI 3 compliant documentation. 
+The documentation will be available here: 
+[```localhost:8080/demo/swagger-ui.html```](localhost:8080/demo/swagger-ui.html)
+
+
+A valid alternative for using OpenAPI 3 is tu use Springdoc to genrate an OpenAPI 3 compliant documentation. 
+[More info here ](https://github.com/springdoc/springdoc-openapi)
 
 Do not forget tests !
 
-When you run your application go to 
-```localhost:8080/demo/swagger-ui.html```
